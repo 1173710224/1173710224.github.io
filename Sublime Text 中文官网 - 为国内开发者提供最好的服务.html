@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<!-- saved from url=(0026)http://www.sublimetext.cn/ -->
+<html class=" plat_windows arch_64"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Sublime Text 中文官网 - 为国内开发者提供最好的服务</title>
+    <meta name="description" content="Sublime Text 是一款用于代码、标记和散文的精致文本编辑器。Sublime Text 中文官网致力于为广大国内开发者提供详尽的中文文档、使用说明等，助力开发者快速掌握这个编辑器。">
+    <meta name="keywords" content="Sublime Text 中文官网, Sublime Text 3, Sublime Text 2, Sublime Text 中文版">
+    <meta name="author" content="Sublime Text 中文官网">
+
+    <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://www.sublimetext.cn/blog/feed">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=480, user-scalable=yes">
+    <link rel="canonical" href="http://mip.sublimetext.cn/">
+    
+    <link rel="stylesheet" type="text/css" href="./sublime_v3.css">
+    <link rel="icon" href="http://www.sublimetext.cn/favicon.ico">
+    <link rel="icon" size="64x64" href="http://www.sublimetext.cn/favicon.ico">
+    <link rel="icon" sizes="192x192" href="http://www.sublimetext.cn/images/icon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="192x192" href="http://www.sublimetext.cn/images/icon.png">
+    <script src="./hm.js.下载"></script><script type="text/javascript">
+    var plat = 'windows'
+    if (/Mac OS X/.test(navigator.userAgent))
+        plat = 'osx'
+    else if (/Linux|FreeBSD/.test(navigator.userAgent))
+        plat = 'linux'
+    var arch = /WOW64|Win64|x86_64/.test(navigator.userAgent) ? '64' : '32'
+    document.documentElement.className += ' plat_' + plat + ' arch_' + arch
+    function byid(x)
+    {
+        return document.getElementById(x)
+    }
+    var scale = 1
+    function res()
+    {
+        scale = window.devicePixelRatio >= 1.3 && document.body.clientWidth > 1024 ? 2 : 1
+        return scale == 2 ? '@2x' : ''
+    }
+    </script>
+    <!--[if lt IE 9]>
+    <script>
+        var els = ['header', 'nav', 'section', 'main', 'article', 'aside', 'footer']
+        for (var i = 0; i < els.length; ++i)
+            document.createElement(els[i]);
+    </script>
+    <style>
+        header, nav, section, main, article, aside, footer {
+            display: block;
+        }
+    </style>
+    <![endif]-->
+</head>
+<body class="docs">
+    <header>
+    <section>
+        <a id="logo" href="http://www.sublimetext.cn/">
+            <img src="./logo.svg" alt="Sublime Text">
+        </a>
+        <nav>
+            <a href="http://www.sublimetext.cn/3">Download</a>
+            <a href="http://packagecontrol.cn/" target="__blank">插件</a>
+            
+            <a href="http://www.sublimetext.cn/support">文档</a>
+            
+            <a href="https://www.sublimetext.com/buy?v=3.0" target="__blank">购买</a>
+            
+        </nav>
+    </section>
+</header>
+
+        <div id="masthead">
+        <section>
+            <div class="tagline"><span>一款用于代码、标记和散文的精致文本编辑器</span></div>
+        </section>
+        <div class="download">
+            <div class="button">
+                <span class="win show_32"><a href="https://download.sublimetext.com/Sublime%20Text%20Build%203211%20Setup.exe">DOWNLOAD FOR（Windows）</a></span>
+                <span class="win show_64"><a href="https://download.sublimetext.com/Sublime%20Text%20Build%203211%20x64%20Setup.exe">DOWNLOAD FOR（Windows）</a></span>
+                <span class="linux"><a href="http://www.sublimetext.cn/docs/3/linux_repositories.html">安装(Linux)</a></span>
+                <span class="mac"><a href="https://download.sublimetext.com/Sublime%20Text%20Build%203211.dmg">DOWNLOAD FOR（Mac）</a></span>
+            </div>
+            <div class="current_version">Sublime Text 3 <i>(Build 3211)</i></div>
+            <div class="changelog"><a href="http://www.sublimetext.cn/3">更新日志</a></div>
+        </div>
+        <section class="screencast">
+            <div class="wrap">
+                <!-- Transparent gif to fill space without broken image icon -->
+                <img id="screencast-title-bar" src="./windows_title_bar@2x.png" style="background-color: transparent;">
+                <script>
+                    function show_title_bar()
+                    {
+                        var bar = byid('screencast-title-bar')
+                        bar.src = '/images/' + plat + '_title_bar' + res() + '.png'
+                        bar.onload = function()
+                        {
+                            bar.style.backgroundColor = 'transparent'
+                        }
+                    }
+                    show_title_bar()
+                </script>
+                <div id="anim_shell">
+                    <div id="anim_container">
+                        <canvas id="target" style="width: 1200px; height: 576px" width="2400" height="1152"></canvas>
+                        <div id="fallback" style="width: 1200px; height: 576px"></div>
+                        <div id="title-overlay" class=""><div>使用 <span class="feature">Goto Anything</span> 快速跳转到文件和函数</div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <main>
+            <section class="screencast-meta">
+        <div id="indicators">
+            <a href="javascript:jump_to(0)" id="indicator1" class="">
+                <span class="jump"></span>
+            </a>
+            <a href="javascript:jump_to(1)" id="indicator2" class="active">
+                <span class="jump"></span>
+            </a>
+            <a href="javascript:jump_to(2)" id="indicator3" class="">
+                <span class="jump"></span>
+            </a>
+            <a href="javascript:jump_to(3)" id="indicator4" class="">
+                <span class="jump"></span>
+            </a>
+        </div>
+        <div class="buttons">
+            <a href="javascript:play()" class="button" id="button-play" title="Play">
+                <svg width="12" height="12" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+                    <title>播放</title>
+                    <path d="M3 0v14l11-7z"></path>
+                    <path d="M0 0h14v14H0z" fill="none"></path>
+                </svg>
+            </a>
+            <a href="javascript:pause()" class="button" id="button-pause" title="Pause">
+                <svg width="12" height="12" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+                    <title>暂停</title>
+                    <path d="M1 14h4V0H1v14zm8-14v14h4V0h-4z"></path>
+                    <path d="M0 0h14v14H0z" fill="none"></path>
+                </svg>
+            </a>
+        </div>
+        <div class="captions">
+            <div id="caption1" style="display: none;">
+                <b>使用 <span class="feature">多重选择</span> 快速重命名变量</b>
+                通过重复使用快捷键 <span class="keys pc"><b>Ctrl</b><i>+</i><b>D</b></span><span class="keys mac"><b>⌘</b><i>+</i><b>D</b></span> 选择多个相同关键词，选择完成即可同时编辑所有关键词
+            </div>
+
+            <div id="caption2" style="display: block;">
+                <b>使用 <span class="feature">Goto Anything</span> 快速跳转到文件和函数</b>
+                使用 
+                <span class="keys pc"><b>Ctrl</b><i>+</i><b>P</b></span>
+                <span class="keys mac"><b>⌘</b><i>+</i><b>P</b></span> 
+                来打开<span class="feature">Goto Anything</span> 菜单, 输入<kbd>xcc</kbd>来选择这个文件 <span class="file"><b>x</b>la_<b>c</b>ompilation_<b>c</b>ache.cc</span>, 输入<kbd>@</kbd> 切换到函数选择模式, 输入 <kbd>:c</kbd> 选择 <span class="symbol">XlaCompilationCache:<b>:C</b>编译</span> 方法.
+            </div>
+
+            <div id="caption3" style="display: none">
+                <b>使用<span class="feature">Goto Definition</span>跳转到源码</b>
+                将鼠标悬停在符号上，就可以以跳转到其定义的文件。光标位于符号上时，通过快捷键 <span class="keys"><b>F12</b></span> 同样可以实现跳转，或使用 <span class="feature">Goto Symbol in Project</span> 功能，通过快捷键 
+                <span class="keys pc"><b>Ctrl</b><i>+</i><b>Shift</b><i>+</i><b>R</b></span>
+                <span class="keys mac"><b>⇧</b><i>+</i><b>⌘</b><i>+</i><b>R</b></span> 
+                跳转到项目任意symbol的定义。
+            </div>
+
+            <div id="caption4" style="display: none">
+                <b>无与伦比的性能</b>
+                此处显示了一个7MB的源代码被打开的速度， 使用 <span class="feature">Goto Symbol</span> 功能，通过快捷键<span class="keys pc"><b>Ctrl</b><i>+</i><b>R</b></span><span class="keys mac"><b>⌘</b><i>+</i><b>R</b></span> 跳转到一个20万行的函数。 对于大型文件或具有复杂语法的代码，保留完整的编辑特性。
+            </div>
+        </div>
+    </section>
+    <script>
+    // var width = window.screen.availWidth
+    // var height = window.screen.availHeight
+    var width = 1200
+    var height = 576
+    var captions =
+    [
+        byid("caption1"),
+        byid("caption2"),
+        byid("caption3"),
+        byid("caption4")
+    ]
+    var indicators =
+    [
+        byid("indicator1"),
+        byid("indicator2"),
+        byid("indicator3"),
+        byid("indicator4")
+    ]
+    var images = []
+
+    var target = byid('target')
+    var use_canvas = target && target.getContext
+    if (!use_canvas)
+    {
+        byid('target').style.display = 'none'
+        target = byid('fallback')
+        target.style.display = 'block'
+    }
+
+    function load_animation()
+    {
+        var script = byid('anim_script')
+        if (script)
+            script.parentNode.removeChild(script)
+        script = document.createElement('script')
+        script.setAttribute('src', 'screencasts/' + plat + res() + '.js')
+        document.body.appendChild(script)
+
+        if (use_canvas)
+        {
+            target.width = scale * width
+            target.height = scale * height
+        }
+    }
+
+    load_animation()
+
+    if (window.matchMedia)
+    {
+        window.matchMedia('screen and (-webkit-min-device-pixel-ratio: 1.3) and (min-width: 1025px), ' +
+            'only screen and (-o-min-device-pixel-ratio: 13/10) and (min-width: 1025px), ' +
+            'only screen and (min-resolution: 120dpi) and (min-width: 1025px)').addListener(function(e)
+        {
+            show_title_bar()
+            load_animation()
+        })
+    }
+
+    function handle_resize(e)
+    {
+        target.style.height = Math.floor(target.clientWidth / width * height) + 'px'
+    }
+
+    handle_resize()
+
+    if (window.addEventListener)
+        window.addEventListener('resize', handle_resize, false)
+    else if (window.attachEvent)
+        window.attachEvent('onresize', handle_resize)
+
+    var cur_screencast = 0
+    var auto_cycle = true
+
+    function next()
+    {
+        auto_cycle = false
+        show_pause_button()
+        auto_next()
+    }
+
+    function auto_next()
+    {
+        cur_screencast = (cur_screencast + 1) % captions.length
+        transition()
+    }
+
+    function prev()
+    {
+        auto_cycle = false
+        show_pause_button()
+        auto_prev()
+    }
+
+    function auto_prev()
+    {
+        --cur_screencast;
+        if (cur_screencast < 0) cur_screencast = captions.length - 1
+        transition()
+    }
+
+    function jump_to(num)
+    {
+        while (num < 0)
+            num = captions.length + num
+        cur_screencast = num % captions.length
+        transition()
+    }
+
+    var continuation = null
+    var start_time = null
+    var remaining_time = 0
+    var timer = null
+
+    function set_timeout(f, timeout)
+    {
+        start_time = new Date().getTime()
+        remaining_time = timeout
+        continuation = f
+        timer = window.setTimeout(f, timeout)
+    }
+
+    // Only run a callback once an animation frame is available, allowing
+    // the animation to be paused when in the background, etc
+    function sync_frame(f)
+    {
+        if (!window.requestAnimationFrame)
+            f()
+        else
+            window.requestAnimationFrame(f)
+    }
+
+    // Run a timeout synced to the animation frame
+    function sync_timeout(f, timeout)
+    {
+        set_timeout(function() { sync_frame(f) }, timeout)
+    }
+
+    function pause_timeout()
+    {
+        var elapsed = (new Date().getTime()) - start_time
+        remaining_time = Math.max(remaining_time - elapsed, 0)
+        window.clearTimeout(timer)
+    }
+
+    function continue_timeout()
+    {
+        start_time = new Date().getTime()
+        timer = window.setTimeout(continuation, remaining_time)
+    }
+
+    function show_play_button()
+    {
+        byid('button-pause').style.display = 'none'
+        byid('button-play').style.display = 'inline-block'
+    }
+
+    function show_pause_button()
+    {
+        byid('button-play').style.display = 'none'
+        byid('button-pause').style.display = 'inline-block'
+    }
+
+    function play()
+    {
+        show_pause_button()
+        continue_timeout()
+    }
+
+    function pause()
+    {
+        pause_timeout()
+        show_play_button()
+    }
+
+    var delay_scale = 0.7
+
+    var overlay = byid('title-overlay')
+
+    function display_error()
+    {
+        window.clearTimeout(timer)
+        continuation = null
+        if (use_canvas)
+        {
+            var ctx = target.getContext('2d')
+            ctx.clearRect(0, 0, target.width, target.height)
+        }
+        else
+        {
+            target.innerHTML = ''
+        }
+        overlay.getElementsByTagName('div')[0].innerHTML = '<i>Error loading screencast</i>';
+        overlay.className = 'show'
+    }
+
+    function update_meta()
+    {
+        for (var i = 0; i < captions.length; ++i)
+        {
+            captions[i].style.display = (i == cur_screencast) ? "block" : "none"
+            indicators[i].className = (i == cur_screencast) ? "active" : ""
+        }
+
+        var b_tags = captions[cur_screencast].getElementsByTagName('B')
+        if (b_tags.length > 0)
+        {
+            overlay.getElementsByTagName('div')[0].innerHTML = b_tags[0].innerHTML;
+            overlay.className = 'show'
+        }
+    }
+
+    function hide_overlay()
+    {
+        overlay.className = ''
+    }
+
+    function transition()
+    {
+        if (timer) window.clearTimeout(timer)
+
+        sync_frame(function() {
+            var img_url = animation_urls[cur_screencast]
+            var timeline = animation_timelines[cur_screencast]
+            var img = prep_animation(img_url, timeline,
+                animation_urls[(cur_screencast + 1) % captions.length])
+
+            sync_timeout(function()
+            {
+                hide_overlay()
+                animate(img, timeline, target, 0)
+            }, 2400)
+        })
+    }
+
+    function draw_canvas(img, element, frame, blits)
+    {
+        var ctx = element.getContext('2d')
+
+        for (j = 0; j < blits.length; ++j)
+        {
+            var blit = blits[j]
+            var sx = blit[0]
+            var sy = blit[1]
+            var w = blit[2]
+            var h = blit[3]
+            var dx = blit[4]
+            var dy = blit[5]
+            ctx.drawImage(img, sx, sy, w, h, dx, dy, w, h)
+        }
+    }
+
+    function draw_fallback(img, element, frame, blits)
+    {
+        if (frame == 0)
+        {
+            while (element.hasChildNodes())
+                element.removeChild(element.lastChild)
+        }
+
+        for (j = 0; j < blits.length; ++j)
+        {
+            var blit = blits[j]
+            var sx = blit[0] / scale
+            var sy = blit[1] / scale
+            var w = blit[2] / scale
+            var h = blit[3] / scale
+            var dx = blit[4] / scale
+            var dy = blit[5] / scale
+
+            var d = document.createElement('div')
+            d.style.position = 'absolute'
+            d.style.left = dx + "px"
+            d.style.top = dy + "px"
+            d.style.width = w + "px"
+            d.style.height = h + "px"
+            d.style.backgroundImage = "url('" + img.src + "')"
+            d.style.backgroundPosition = "-" + sx + "px -" + sy + "px"
+            d.style.backgroundSize = width + "px auto"
+
+            element.appendChild(d)
+        }
+    }
+
+    function draw(img, element, frame, blits)
+    {
+        if (use_canvas)
+            draw_canvas(img, element, frame, blits)
+        else
+            draw_fallback(img, element, frame, blits)
+    }
+
+    function animate(img, timeline, element, start_frame)
+    {
+        var i = start_frame;
+
+        var f = function()
+        {
+            var frame = i++ % timeline.length
+            var delay = timeline[frame].delay * delay_scale
+            var blits = timeline[frame].blit
+
+            draw(img, element, frame, blits)
+
+            var callback = f
+            if (i == timeline.length * 2 && auto_cycle)
+                callback = auto_next
+            sync_timeout(callback, delay)
+        }
+
+        if (timer) window.clearTimeout(timer)
+        sync_frame(f)
+    }
+
+    function prep_animation(img_url, timeline, preload_url)
+    {
+        var ready = function()
+        {
+            sync_frame(function() {
+                update_meta()
+                draw(images[img_url], target, 0, timeline[0].blit)
+            })
+            if (!(preload_url in images))
+            {
+                images[preload_url] = new Image()
+                images[preload_url].src = preload_url
+            }
+        }
+
+        if (img_url in images)
+        {
+            ready()
+        }
+        else
+        {
+            images[img_url] = new Image()
+            images[img_url].onload = ready
+            images[img_url].onerror = function()
+            {
+                delete images[img_url]
+                display_error()
+            }
+            images[img_url].src = img_url
+        }
+        return images[img_url]
+    }
+    </script>
+    <section>
+        <h2 class="love"><span>受欢迎的特性<em></em></span></h2>
+
+        <div class="feature odd">
+            <h3>Goto Anything</h3>
+            <p>使用 <span class="feature">Goto Anything</span> 只需几个按键即可打开文件，并立即跳转到符号，行或单词。
+
+            </p><p>使用快捷键 
+                <span class="keys pc"><b>Ctrl</b><i>+</i><b>P</b></span>
+                <span class="keys mac"><b>⌘</b><i>+</i><b>P</b></span>, 可以:
+
+            </p><ul>
+                <li>输入部分文件名即可将其打开。
+                </li><li>输入 <kbd>@</kbd> 跳转到符号， 输入<kbd>#</kbd> 可以在文件中搜索， 输入 <kbd>:</kbd> 可以跳转到指定行。
+            </li></ul>
+
+            <p>这些快捷方式可以组合使用, 输入 <kbd>tp@rf</kbd> 可能会打开<span class="file">text_parser.py</span>这个文件，并定位到 <span class="symbol">read_file</span> 函数. 同样，<kbd>tp:100</kbd> 会将您带到同一文件的第100行。</p>
+        </div>
+
+        <div class="feature even">
+            <h3>Goto Definition</h3>
+
+            <p>使用语法定义中的信息，Sublime Text 自动生成每个类，方法和函数的项目范围索引。 该索引支持<span class="feature"> Goto Definition</span>，它以三种不同的方式公开：</p>
+
+            <ul>
+                <li>将鼠标悬停在符号上时会显示一个弹出窗口</li>
+                <li>当光标在符号时，按 <span class="keys"><b>F12</b></span></li>
+                <li><span class="feature">Goto Symbol in Project</span> 功能</li>
+            </ul>
+
+            <p>可以通过配置文件在每个语法的基础上自定义符号索引，从而允许用户根据需要定制功能。</p>
+        </div>
+
+        <div class="feature odd">
+            <h3>多重选择（Multiple Selections）</h3>
+
+            <p>多重选择可以同时对N处更改，轻松重命名变量，以前所未有的速度操作文件。</p>
+
+            <p> <span class="keys pc"><b>Ctrl</b><i>+</i><b>Shift</b><i>+</i><b>L</b></span><span class="keys mac"><b>⇧</b><i>+</i><b>⌘</b><i>+</i><b>L</b></span>将选区分为行， <span class="keys pc"><b>Ctrl</b><i>+</i><b>D</b></span><span class="keys mac"><b>⌘</b><i>+</i><b>D</b></span> 选择下一个被选中的单词。 要使用鼠标进行多项选择，请查看 <a href="http://www.sublimetext.cn/docs/2/column_selection.html">列选择</a>文档。
+        </p></div>
+
+        <div class="feature even">
+            <h3>命令面板（Command Palette）</h3>
+
+            <p> <span class="feature">命令面板</span> 包含不常用的功能，如排序，更改语法和更改缩进设置。 只需几次击键，您就可以搜索自己想要的内容，而无需浏览菜单或记住模糊的键绑定。</p>
+
+            <p>使用 <span class="pc keys"><b>Ctrl</b><i>+</i><b>Shift</b><i>+</i><b>P</b></span><span class="mac keys"><b>⇧</b><i>+</i><b>⌘</b><i>+</i><b>P</b></span>
+            显示<span class="feature">命令面板</span> 
+            </p>
+        </div>
+
+        <div class="feature odd">
+            <h3>强大的API和包生态系统（POWERFUL API AND PACKAGE ECOSYSTEM）</h3>
+
+            <p>
+                Sublime Text有一个功能强大的Python <a href="http://www.sublimetext.cn/docs/3/api_reference.html" target="__blank">API</a>，允许通过插件增强内置功能。
+             </p>
+            <p>
+                <a href="https://packagecontrol.io/" target="__blank">Package Control</a>是一个Sublime Text包管理器，通过命令面板，可以非常容易的去安装Sublime Text插件。
+            </p>
+        </div>
+
+        <div class="feature even">
+            <h3>自定义所有（Customize Anything）</h3>
+
+            <p>快捷键绑定，菜单，代码片段，宏，完成等等 - 只需使用简单的JSON文件即可自定义Sublime Text中的所有内容。 该系统为您提供了灵活性，因为可以在每个文件类型和每个项目的基础上指定设置。</p>
+        </div>
+
+        <div class="feature odd">
+            <h3>分割编辑（Split Editing）</h3>
+
+            <p>通过拆分编辑可以，充分利用宽屏显示器。 并排编辑文件，或编辑一个文件中的两个位置。 您可以根据需要使用尽可能多的行和列进行编辑。 通过使用多个窗口进行编辑，并在每个窗口中使用多个拆分来利用多个监视器。</p>
+
+            <p>查看 <span class="menu">View <img src="./right.svg" alt="▶"> Layout</span> 菜单，了解拆分编辑选项。 要在一个文件中打开多个视图，请使用 <span class="menu">File <img src="./right.svg" alt="▶"> New View into File</span> 菜单项。
+        </p></div>
+
+        <div class="feature even">
+            <h3>即时项目开关（Instant Project Switch）</h3>
+
+            <p>
+                Sublime Text中的项目捕获工作区的全部内容，包括已修改和未保存的文件。您可以以与<span class="feature">Goto Anything</span>类似的方式在项目之间切换，并且切换是即时的，没有保存提示 - 下次打开项目时将恢复所有修改。
+            </p>
+        </div>
+
+        <div class="feature odd">
+            <h3>性能（PERFORMANCE）</h3>
+
+            <p>Sublime Text由自定义组件构建，提供无与伦比的响应能力。 从功能强大的自定义跨平台UI工具包到无与伦比的语法高亮引擎，Sublime Text设置了性能标准。</p>
+        </div>
+
+        <div class="feature even">
+            <h3>跨平台（Cross Platform）</h3>
+
+            <p>Sublime Text适用于Mac，Windows和Linux。 无论使用何种操作系统，只需一个许可即可在您拥有的每台计算机上使用Sublime Text。</p>
+
+            <p>Sublime Text使用自定义UI工具包，针对速度和美感进行了优化，同时利用每个平台上的本机功能。</p>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="love"><span>常见问题<em></em></span></h2>
+
+        <div class="feature feature_100">
+            <h3>如何安装插件？</h3>
+            <p>在安装Sublime Text的插件前，需要先将插件仓库地址配置好，具体方法可参数<a target="__blank" href="http://packagecontrol.cn/installation">Sublime Text插件初始化</a>。</p>
+            <p>初始化之后，在<a target="__blank" href="http://packagecontrol.cn/">插件仓库</a>中搜索自己想要安装的插件，比如：<span class="feature">Chinese​Localizations</span></p>
+            <p>使用快捷键 
+                <span class="keys pc"><b>Ctrl</b><i>+</i><b>P</b></span>
+                <span class="keys mac"><b>⌘</b><i>+</i><b>P</b></span>, 输入：install 选中 <b>Package Control:Install Package</b>回车，然后输入<span class="feature">Chinese​Localizations</span>回车，搞定。
+            </p>
+            
+        </div>
+
+        <div class="feature feature_100">
+            <h3>如何汉化？</h3>
+
+            <p>Sublime Text 通过<span class="feature">Chinese​Localizations</span>插件来实现汉化。安装完成之后，即可在Help菜单中切换语言。</p>
+
+
+        </div>
+    </section>
+    </main><script src="./windows@2x.js.下载"></script>
+    
+
+    <footer>
+    <section>
+        © SublimeText 中文官网 <a href="http://beian.miit.gov.cn/" target="_blank">鲁ICP备13009489号</a>
+    </section>
+</footer>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?b1ed00ea665765dcf139c94d3c72d028";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    <!--[if lt IE 9]>
+    <script>
+        var logo_img = byid('logo').getElementsByTagName('IMG')[0]
+        logo_img.src = logo_img.src.replace('.svg', '.png')
+    </script>
+    <![endif]-->
+
+
+</body></html>
